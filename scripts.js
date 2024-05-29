@@ -66,3 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var whatsappButton = document.getElementById('whatsappButton2');
+    if (whatsappButton) {
+        whatsappButton.addEventListener('click', function() {
+            var phoneNumber = '5547992528805';
+            var message = encodeURIComponent('Olá, quero realizar um orçamento. \u{1F604}\u{2699}');
+            var whatsappAppLink = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message;
+            window.open(whatsappAppLink, '_blank');
+        });
+    }
+});
