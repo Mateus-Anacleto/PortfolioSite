@@ -42,6 +42,9 @@ input[type="submit"]:hover{
     box-shadow: 0px 0px 8px #4763f1;
     transform: scale(1.05);
 }
+.btn-abrir{
+    display: none;
+}
 /* ESTILO DO CABEÇALHO */
 
 header{
@@ -87,11 +90,16 @@ header nav.menu-desktop ul li{
     z-index: 99999;
     width: 0%;
     overflow: hidden;
+    transition: .2s;
 }
 
 .menu-mobile.abrir-menu{
     width: 70%;
 }
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
 .menu-mobile .btn-fechar{
     padding: 20px 5%;
 }
@@ -308,7 +316,10 @@ footer .flex{
         display: none;
     }
     header img{
-        width: 200px;
+        width: 250px;
+    }
+    .btn-abrir{
+        display: block;
     }
 
     /*Topo Site*/
@@ -323,7 +334,7 @@ footer .flex{
     .topo-site .flex{
         flex-direction: column-reverse;
     }
-    section.topo-site h1{
+    section.topo-site .txt-left-topo h1{
         padding: 20px 8%;
         margin-bottom: -25px;
     }
@@ -353,7 +364,6 @@ footer .flex{
         flex-direction: column-reverse;
     }
     .sobre .txt-sobre h2{
-        margin-left: 30px;
         font-size: 35px;
         line-height: 35px;
         margin-bottom: 30px;
